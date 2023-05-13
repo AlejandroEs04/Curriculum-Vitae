@@ -1,0 +1,118 @@
+.contenedor_inicio {
+    display: flex;
+    flex-direction: column;
+
+    height: 20rem;
+
+    border-top: 3px solid $negro;
+    border-bottom: 3px solid $negro;
+}
+.contenedor_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 2rem;
+        transition: all linear 0.2s;
+    }
+}
+@media (min-width: $tablet) {
+    .contenedor_inicio {
+        display: grid;
+        grid-template-columns: 60% auto;
+    }
+}
+.imagen_inicio {
+    color: $blanco;
+    background-image: url(../img/Fondo.webp);
+    height: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2 {
+        transition: all linear 0.2s;
+    }
+    transition: all ease-in-out 0.2s;
+}
+@media (min-width: $tablet) {
+    .imagen_inicio {
+        height: auto;
+        align-items: flex-start;
+        padding-left: 5rem;
+        h2, h1 {
+            text-align: start;
+        }
+    }
+}
+.informacion_inicio {
+    background-color: $color2;
+    padding: 1rem 3rem 9rem 3rem;
+    text-align: center;
+    height: 45%;
+}
+@media (min-width: $tablet) {
+    .informacion_inicio {
+        height: 100%;
+    }
+}
+.informacion_inicio:hover {
+    p{
+        color: $color1;
+    }
+}
+.imagen_inicio:hover {
+    h2 {
+        color: darken($color: $color2, $amount: 10);
+    }
+}
+@media (min-width: $tablet) {
+    .contenedor_texto {
+        h2 {
+            font-size: 3.2rem;
+        }
+    }
+}
+.flecha {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    margin: -2rem 0 2rem 0;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+    filter: invert(0);
+
+    p {
+        margin: 0 0 1.2rem 0;
+    }
+
+    img {
+        width: 6rem;
+        height: 6rem;
+    }
+    img:hover {
+        animation-name: moverse;
+        animation-duration: 1s;
+        animation-delay: 0.2s;
+        animation-iteration-count: infinite;
+    }
+}
+@media (min-width: $tablet) {
+    .flecha {
+        filter: invert(100);
+    }
+}
+.flecha-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,18 @@
+.portafolio {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.proyecto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.slider {
+    display: flex;
+    img {
+        width: 100%;
+    }
+}
+.hide {
+    display: none;
+}

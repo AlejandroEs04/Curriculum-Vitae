@@ -1,0 +1,48 @@
+.informacion-mi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $negro;
+    color: $blanco;
+    padding: 0 5rem;
+
+    p {
+        font-size: 2rem;
+    }
+    img {
+        margin-top: 2rem;
+        filter: invert(100);
+        width: 4rem;
+        height: 4rem;
+    }
+    img:hover {
+        animation-name: moverse;
+        animation-duration: 1s;
+        animation-delay: 0.2s;
+        animation-iteration-count: infinite;
+    }
+    a {
+        text-decoration: none;
+        color: $blanco;
+        margin: 0.5rem;
+        font-size: 2rem;
+
+        transition: all linear 0.1s;
+    }
+    a:hover {
+        color: $color2;
+    }
+}
+
+@keyframes moverse {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -1rem);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
