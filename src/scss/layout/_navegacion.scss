@@ -64,23 +64,49 @@ header {
 
         transition: all linear 0.2s;
     }
-    a:hover {
+    p{
+        color: darken($color: $color2, $amount: 20);
+        font-size: 1.5rem;
+        border: 1px solid transparent;
+
+        transition: all linear 0.2s;
+    }
+    a:hover, p:hover {
         border-bottom: 1px solid $blanco;
+    }
+    h3 {
+        margin: 0;
+        color: $blanco;
     }
 
     .nav-com-btn {
-        margin: 0 0 2rem 0;
+        margin: 2rem 0 0 0;
 
         a {
             font-size: 2.5rem;
         }
     }
 
-    p{
-        color: $blanco;
-        margin-top: 5rem;
-        font-size: 1.8rem;
+    .parrafo {
+        border: none;
     }
+    .parrafo:hover {
+        border: none;
+    }
+
+    
+}
+.overlay {
+    background-color: rgba(0,0,0,.5);
+    bottom: 0;
+    display: grid;
+    height: 100%;
+    left: 0;
+    place-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
 }
 .mostrar {
     display: flex;
@@ -146,10 +172,18 @@ header {
 .barras {
     display: flex;
     flex-direction: column;
+    
+    img {
+        filter: invert(100%);
+    }
 
     margin-left: 1rem;
 
     cursor: pointer;
+}
+.hamburguesa {
+    filter: invert(100);
+    width: 3.5rem;
 }
 .barra {
     height: 0.2rem;

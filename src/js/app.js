@@ -3,6 +3,8 @@ const navegacion = document.getElementById('navegacion');
 const contenedorNav = document.getElementById('navegacion-contenedor');
 const barras = document.getElementById('barras');
 const barrasHide = document.getElementById('hide');
+const main = document.querySelector('main');
+const header = document.querySelector('header');
 
 var navHeight = navegacion.clientHeight;
 var windowHeight = window.innerHeight;
@@ -27,6 +29,8 @@ function navegacionConteneroSize() {
 
 function mostrarNav() {
     contenedorNav.classList.add('mostrar');
+
+    main.addEventListener('click', eliminarNav);
 }
 
 function eliminarNav() {

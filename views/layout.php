@@ -15,7 +15,7 @@
             </div>
 
             <div class="barras-nav" id="barras">
-                <p>Hola</p>
+                <img src="build/img/icono-hamburguesa.svg" alt="Abrir Menu" class="hamburguesa">
             </div>
 
             <div class="navegacion">
@@ -31,10 +31,8 @@
 
     <div class="contenedor-navegacion-completa">
         <div class="navegacion-completa" id="navegacion-contenedor">
+            <h3>Menu</h3>
             <p id="hide">Cerrar</p>
-            <div class="texto_navegacion nav-com-btn">
-                <a href="/contacto">Contact me</a>
-            </div>
             <?php if($inicio): ?>
                 <a href="/">Main</a>
             <?php endif; ?>
@@ -42,7 +40,11 @@
             <a href="https://github.com/AlejandroEs04">GitHub</a>
             <a href="/portafolio">Portfolio</a>
 
-            <p>Tambien puedes descargar mi Curriculum Vitae</p>
+            <div class="texto_navegacion nav-com-btn">
+                <a href="/contacto">Contact me</a>
+            </div>
+
+            <p class="parrafo">Tambien puedes descargar mi Curriculum Vitae</p>
         </div>
     </div>
 

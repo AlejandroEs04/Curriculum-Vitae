@@ -19,15 +19,7 @@ function mostrarNotificacion($resultado) {
 
     switch($resultado) { 
         case 1:
-            $mensaje = 'Creado Correctamente';
-        break;
-
-        case 2:
-            $mensaje = 'Actualizado Correctamente';
-        break;
-
-        case 3:
-            $mensaje = 'Eliminado Correctamente';
+            $mensaje = 'Mensaje enviado correctamente';
         break;
 
         default:
