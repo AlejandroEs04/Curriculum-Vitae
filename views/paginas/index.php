@@ -93,7 +93,7 @@
                 <a href="/contacto">Contact me</a>
             </div>
             <a href="/#inicio">
-                <img width="50" height="50" src="https://img.icons8.com/ios/50/circled-up-2.png" alt="circled-up-2"/>
+                <img src="build/img/flecha.gif" alt="Saber de mi">
             </a>            
         </div>
     </div>

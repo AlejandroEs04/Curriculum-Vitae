@@ -3,15 +3,20 @@ header {
 }
 .contenedor_navegacion {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: $blanco;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 7rem;
 
     a {
         text-decoration: none;
         color: $blanco;
+    }
+}
+@media (min-width: $desktop) {
+    .contenedor_navegacion {
+        justify-content: space-evenly;
     }
 }
 .navegacion {
@@ -31,12 +36,76 @@ header {
     }
 
 }
+.contenedor-navegacion-completa {
+    display: flex;
+    justify-content: end;
+}
+.mostrar  {
+    display: flex;
+}
+.navegacion-completa {
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    visibility: visible;
+    background-color: $color3;
+    padding: 6rem 8rem;
+    position: fixed;
+    width: 0;
+    z-index: 1;
+    text-align: end;
+
+    a {
+        color: $blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        border: 1px solid transparent;
+        margin-bottom: 0.5rem;
+
+        transition: all linear 0.2s;
+    }
+    a:hover {
+        border-bottom: 1px solid $blanco;
+    }
+
+    .nav-com-btn {
+        margin: 0 0 2rem 0;
+
+        a {
+            font-size: 2.5rem;
+        }
+    }
+
+    p{
+        color: $blanco;
+        margin-top: 5rem;
+        font-size: 1.8rem;
+    }
+}
+.mostrar {
+    display: flex;
+    animation-name: aparecer;
+    animation-duration: 0.2s;
+}
+@media (max-width: $tablet) {
+    .navegacion-completa {
+        width: 70%;
+    }
+}
+@media (max-width: $telefono) {
+    .navegacion-completa {
+        align-items: center;
+        padding: 7rem 2rem;
+        text-align: center;
+        width: 100%;
+    }
+}
 .texto_navegacion {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    margin-right: 2rem;
 
     a {
         text-decoration: none;
@@ -52,6 +121,12 @@ header {
     a:hover {
         background-color: transparent;
         border: 2px solid darken($color: $color1, $amount: 5);
+    }
+}
+@media (min-width: $desktop) {
+    .texto_navegacion {
+        width: 40%;
+        margin: 0;
     }
 }
 @media (min-width: $tablet) {
@@ -83,4 +158,21 @@ header {
 }
 .barra:not(:last-child) {
     margin-bottom: 0.5rem;
+}
+.barras-nav {
+    display: flex;
+}
+@media (min-width: $desktop) {
+    .barras-nav {
+        display: none;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;
+    }
 }
